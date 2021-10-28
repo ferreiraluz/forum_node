@@ -1,0 +1,43 @@
+<div class="container">
+    <h2> Lista de Perguntas </h2>
+
+    <div class="card-title">
+
+        <hr>
+        
+            <%
+                questions.forEach(questions => { %>
+                    <h2> <%= questions.title %> </h2>
+
+                    <hr>
+
+                    <p> <%= questions.body %> </p>
+
+                    <hr>
+
+              
+                    <a href="/questionlist/<%= questions.id %>">
+                        <button> Responder </button>
+                    </a>
+
+            <% }) %>
+
+        
+
+       
+        
+
+    </div>
+
+    
+</div>
+
+<style>
+    .card-title{
+        width: 600px;
+        border: 1px solid black;
+        height: 50%;
+    }
+
+    
+</style>

@@ -1,0 +1,35 @@
+<h1>
+    <%= question.title %>
+</h1>
+
+<hr>
+
+<p>
+    <%= question.body %>
+</p>
+
+<hr>
+
+    <hr>
+
+<form action="/answer" method="post">
+    <textarea name="content" placeholder="Responda a pergunta">
+
+    </textarea>
+
+    <input type="hidden" name="questionId" id="questionId" value="<%= question.id %>"> <!-- verifica o id da pagina -->
+
+    <input type="submit" value="Enviar Resposta">
+</form>
+
+<h2> Respostas: </h2>
+
+<% answers.forEach(answer => {%>
+    <h2>
+        <%= answer.content %> <hr>
+    </h2>
+<% })%>
+
+
+
+    
